@@ -1,7 +1,6 @@
 {
-  "buildCommand": "npm install && npm rebuild vite && npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite",
   "installCommand": "npm install",
-  "ignoreCommand": "echo 'No ignored builds'"
+  "buildCommand": "npm rebuild vite && npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite"
 }
