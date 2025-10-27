@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "vite build",
     "preview": "vite preview",
-    "vercel-build": "npm install && npm run build"
+    "vercel-build": "npm ci && npm install --force rollup --platform=linux --arch=x64 && npm run build"
   },
   "dependencies": {
     "framer-motion": "^10.12.16",
