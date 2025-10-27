@@ -10,11 +10,12 @@
     "vercel-build": "npm ci && npm install --force rollup --platform=linux --arch=x64 && npm run build"
   },
   "dependencies": {
-    "framer-motion": "^10.12.16",
+    "framer-motion": "^10.18.0",
     "lucide-react": "^0.268.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "recharts": "^2.5.0"
+    "react-router-dom": "^7.9.4",
+    "recharts": "^2.15.4"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.0",
