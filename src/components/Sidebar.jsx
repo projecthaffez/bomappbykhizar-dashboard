@@ -1,15 +1,31 @@
-import React from 'react'
-export default function Sidebar(){
+import React from "react";
+import { NavLink } from "react-router-dom";
+
+const Link = ({ to, children }) => (
+  <NavLink
+    to={to}
+    className={({ isActive }) =>
+      `block px-4 py-3 rounded-lg mb-2 ${isActive ? "bg-yellow-500 text-black" : "text-gray-300 hover:bg-gray-800"}`
+    }
+  >
+    {children}
+  </NavLink>
+);
+
+export default function Sidebar() {
   return (
-    <aside className="w-72 bg-[#070707] border-r border-yellow-600/10 p-6 hidden md:block">
-      <div className="mb-8 text-2xl font-bold text-yellow-400">BomAppByKhizar</div>
-      <nav className="space-y-2 text-sm">
-        <a className="block p-3 rounded-lg hover:bg-yellow-600/10">Dashboard</a>
-        <a className="block p-3 rounded-lg hover:bg-yellow-600/10">Stats</a>
-        <a className="block p-3 rounded-lg hover:bg-yellow-600/10">Pages</a>
-        <a className="block p-3 rounded-lg hover:bg-yellow-600/10">Settings</a>
+    <aside className="w-64 bg-[#0a0a0a] p-6 border-r border-gray-800 min-h-screen">
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold text-yellow-400">BomAppByKhizar</h2>
+        <p className="text-xs text-gray-400 mt-1">Auto Promo Dashboard</p>
+      </div>
+      <nav className="mt-6">
+        <Link to="/dashboard">Dashboard</Link>
+        <Link to="/stats">Stats</Link>
+        <Link to="/pages">Pages</Link>
+        <Link to="/settings">Settings</Link>
+        <Link to="/login">Login</Link>
       </nav>
-      <div className="mt-8 text-xs text-yellow-300">Logged in as: Admin</div>
     </aside>
-  )
+  );
 }

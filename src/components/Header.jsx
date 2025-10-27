@@ -1,12 +1,15 @@
-import React from 'react'
+import React from "react";
+
 export default function Header(){
   return (
     <header className="flex items-center justify-between mb-6">
-      <h1 className="text-2xl font-bold text-yellow-400">Dashboard</h1>
-      <div className="flex gap-3 items-center">
-        <button id='syncBtn' className="bg-yellow-500 text-black px-4 py-2 rounded-2xl font-semibold">Sync Users</button>
-        <button id='promoBtn' className="bg-yellow-500 text-black px-4 py-2 rounded-2xl font-semibold">Run Promo Now</button>
+      <div>
+        <h1 className="text-2xl font-semibold text-yellow-400">🎯 Control Panel</h1>
+        <p className="text-sm text-gray-400">Manage promos, view stats & control system</p>
+      </div>
+      <div className="flex items-center gap-4">
+        <div className="text-sm text-gray-400">v7.0</div>
       </div>
     </header>
-  )
+  );
 }
