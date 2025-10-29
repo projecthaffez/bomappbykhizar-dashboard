@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "vercel-build": "npm ci && npm install react-router-dom@6.23.1 && npm install rollup --force && npm run build"
+    "vercel-build": "npm install --legacy-peer-deps && npm install react-router-dom@6.23.1 && npm install rollup -g && npm run build"
   },
   "dependencies": {
     "framer-motion": "^10.18.0",
